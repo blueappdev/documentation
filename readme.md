@@ -4,7 +4,9 @@
 
 #### Combination of cut and grep using perl
 Greps for all lines whose fifth field (tab separated) matches a regular expression.
-    cat file.txt | perl -F"\t" -ane 'print if $F[5] =~ /^2015061/'
+```
+cat file.txt | perl -F"\t" -ane 'print if $F[5] =~ /^2015061/'
+```  
 #### Pattern based cut
     perl -nE '/<id>(AMQ.+)<\/id>/; say $1'
 #### List files with creation time
