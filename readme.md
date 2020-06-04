@@ -1,19 +1,22 @@
 #### Last reboot of Linux
-    > uptime
-    21:27:39 up 1 day,  1:34, 28 users,  load average: 3.02, 2.77, 2.40
-
+```
+> uptime
+21:27:39 up 1 day,  1:34, 28 users,  load average: 3.02, 2.77, 2.40
+```
 #### Combination of cut and grep using perl
 Greps for all lines whose fifth field (tab separated) matches a regular expression.
 ```
 cat file.txt | perl -F"\t" -ane 'print if $F[5] =~ /^2015061/'
 ```  
 #### Pattern based cut
-    perl -nE '/<id>(AMQ.+)<\/id>/; say $1'
+```
+perl -nE '/<id>(AMQ.+)<\/id>/; say $1'
+```
 #### List files with creation time
-    ls -c
-    ls -ltrc
+```ls -c
+ls -ltrc```
 #### Remove old files
-    find . -mtime +167 -exec rm {} \;
+```find . -mtime +167 -exec rm {} \;```
 #### Count occurences using uniq -c
     cat someFiles | 
         grep 'userName' | 
